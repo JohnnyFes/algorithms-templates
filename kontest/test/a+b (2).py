@@ -1,0 +1,7 @@
+fi = open("input.txt", "r")
+fo = open("output.txt", "w")
+ab = fi.readline()
+r = list(map(int, ab.split(' ')))
+fo.write(str(sum(r)))
+fi.close()
+fo.close()
