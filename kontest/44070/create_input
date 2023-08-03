@@ -1,0 +1,15 @@
+import os
+import sys
+import random
+
+current_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+fo = open(os.path.join(current_dir, "input.txt"), "w")
+
+length = 1000000
+output = ['0'] + list((str(random.randint(0, length)) for i in range(0, length)))
+for i in range(0, 10):
+    output[random.randint(0, length)] = '0'
+
+fo.write(str(length) + '\n')
+fo.write(' '.join(output))
+fo.close()
